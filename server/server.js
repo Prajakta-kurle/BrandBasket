@@ -15,7 +15,7 @@ const commanFeatureRouter = require("./routes/comman/feature_routes")
 
 //create a database connection or you can also
 //create separate file and import it here
-mongoose.connect('mongodb+srv://prajakta151198:Prajakta1234@cluster0.ermvhgb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://prajakta151198:Prajakta1234@cluster0.ermvhgb.mongodb.net/brandbasket?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>console.log('mongodb connected')).catch((error)=>console.log('error'));
 
 const app = express()
