@@ -173,12 +173,12 @@ function ShoppingHeader() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-white">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo and Navigation */}
         <Link to="/shop/home" className="flex items-center gap-2">
           <House className="w-6 h-6" />
-          <span className="font-bold">ECommerce</span>
+          <span className="font-bold">BrandBasket</span>
         </Link>
 
         {/* Mobile Menu */}

@@ -1,20 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { Outlet } from 'react-router-dom';
+import bgImage from '../../assets/Pictures/background.png';
 
-
-function Authlayout() {
+function AuthLayout() {
   return (
-    <div className='flex min-h-screen w-full'>
-      <div className='hidden lg:flex items-center justify-center bg-black w-1/2 px-12'>
-      <div className='max-w-md space-y-6 text-center text-primary-foreground'>
-        <h1 className='text-4xl font-extrabold tracking-tight'>Welcome to E-Commerce Shopping</h1>
+    <div
+      className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+
+      {/* Login/Signup Form */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 py-12 sm:px-6 lg:px-8">
+        <div className="w-full max-w-md bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-lg">
+          <Outlet />
+        </div>
       </div>
     </div>
-    <div className='flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8'>
-        <Outlet/>
-    </div>
-    </div>
-  )
+  );
 }
 
-export default Authlayout
+export default AuthLayout;
